@@ -1,3 +1,5 @@
+/*************  ✨ Codeium Command 🌟  *************/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +12,10 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #444;
   background-color: #f3f3f3;
+  min-height: 100vh;
   height: 100vh;
   padding: 2rem;
 }
@@ -22,6 +25,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  flex-wrap: wrap;
 }
 
 .welcome {
@@ -35,6 +39,7 @@ nav {
 
 .login {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .login__input {
@@ -83,6 +88,7 @@ nav {
   max-width: 100rem;
   margin: 4rem auto;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
@@ -90,6 +96,13 @@ nav {
   /* NOTE This creates the fade in/out animation */
   /* opacity: 0; */
   transition: all 1s;
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto repeat(3, 15rem) auto;
+  }
 }
 
 .balance {
@@ -228,11 +241,17 @@ h2 {
 
 .form {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-columns: 2.5fr 2.5fr 1fr;
   grid-template-rows: auto auto;
   gap: 0.4rem 1rem;
 }
 
+@media (min-width: 768px) {
+  .form {
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    grid-template-rows: auto auto;
+  }
 /* Exceptions for interst */
 .form.form--loan {
   grid-template-columns: 2.5fr 1fr 2.5fr;
@@ -290,103 +309,4 @@ h2 {
   font-weight: 600;
 }
 
-/* ...............RESPONSIVE DESIGN.................... */
-
-/* Responsive Design Enhancements */
-@media (max-width: 1024px) {
-  /* Adjust nav for tablets */
-  nav {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .logo {
-    height: 5rem;
-  }
-  .login {
-    margin-top: 1.5rem;
-  }
-  
-  /* Improve balance section */
-  .balance {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  .balance__label {
-    font-size: 2.8rem;
-  }
-  .balance__value {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Stack main sections */
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .movements {
-    width: 90%;
-    max-height: 50vh;
-    overflow: scroll;
-  }
-
-  .movements__row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .movements__value {
-    margin-left: 0;
-    margin-top: 0.75rem;
-  }
-
-  /* Adjust operations */
-  .operation {
-    width: 90%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-
-  .form__btn {
-    margin-top: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Fine-tune smaller screens */
-  body {
-    padding: 1rem;
-  }
-
-  .balance__value {
-    font-size: 3.5rem;
-  }
-
-  .summary {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .summary__value {
-    margin-right: 0;
-    margin-top: 0.75rem;
-  }
-
-  .logout-timer {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-
+/******  560266e1-5f0b-45ba-a5fe-23292f07de6d  *******/

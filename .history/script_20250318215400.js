@@ -80,32 +80,8 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const calcPrintBalance = movements => {
-  const balance = movements.reduce((acc, curr) => acc + curr, 0);
-  labelBalance.textContent = `${balance} INR`;
-};
-
-calcPrintBalance(account1.movements);
-
-const calcDisplaySummary = movements => {
-  const incomes = movements.filter(mov => mov > 0);
-  const deposits = incomes.reduce((acc, curr) => acc + curr, 0);
-  labelSumIn.textContent = `${deposits} INR`;
-
-  const withdrawals = movements.filter(mov => mov < 0);
-  const withdraw = withdrawals.reduce((acc, curr) => acc + curr, 0);
-  labelSumOut.textContent = `${Math.abs(withdraw)} INR `;
-
-  const interest = movements
-    .filter(mov => mov > 0)
-    .map(mov => (mov * 1.2) / 100)
-    .reduce((acc, curr) => acc + curr, 0);
-  labelSumInterest.textContent = `${interest} INR`;
-};
-
-calcDisplaySummary(account1.movements);
-
 // to convert the username to first letter
+
 // const usr = 'Vyom Gor'; // vg
 const createUsername = usr => {
   usr.forEach(acc => {
@@ -117,3 +93,16 @@ const createUsername = usr => {
   });
 };
 createUsername(accounts);
+
+/*************  ✨ Codeium Command 🌟  *************/
+const calcPrintBalance = movements => {
+  const balance = movements.reduce((acc, curr) => acc + curr, 0);
+  console.log(`Your balance is ${balance}`);
+};
+
+const calcPrintBalance = (movements){
+  const balance = movements.reduce((acc, curr, i, arr) => {
+    return acc + curr ,0
+  })
+}
+/******  8985588a-887e-4a02-8ee3-31a1f823ebf9  *******/

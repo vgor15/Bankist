@@ -35,7 +35,7 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
-// Elements;
+// Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance__value');
@@ -62,7 +62,7 @@ const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
 const displayMovements = function (movements) {
-  containerMovements.innerHTML = '';
+  containerApp.innerHTML = '';
   movements.forEach(function (val, index) {
     const type = val > 0 ? 'deposit' : 'withdrawal';
 
@@ -80,33 +80,9 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const calcPrintBalance = movements => {
-  const balance = movements.reduce((acc, curr) => acc + curr, 0);
-  labelBalance.textContent = `${balance} INR`;
-};
-
-calcPrintBalance(account1.movements);
-
-const calcDisplaySummary = movements => {
-  const incomes = movements.filter(mov => mov > 0);
-  const deposits = incomes.reduce((acc, curr) => acc + curr, 0);
-  labelSumIn.textContent = `${deposits} INR`;
-
-  const withdrawals = movements.filter(mov => mov < 0);
-  const withdraw = withdrawals.reduce((acc, curr) => acc + curr, 0);
-  labelSumOut.textContent = `${Math.abs(withdraw)} INR `;
-
-  const interest = movements
-    .filter(mov => mov > 0)
-    .map(mov => (mov * 1.2) / 100)
-    .reduce((acc, curr) => acc + curr, 0);
-  labelSumInterest.textContent = `${interest} INR`;
-};
-
-calcDisplaySummary(account1.movements);
-
 // to convert the username to first letter
-// const usr = 'Vyom Gor'; // vg
+
+const usr = 'Vyom Gor'; // vg
 const createUsername = usr => {
   usr.forEach(acc => {
     acc.username = acc.owner
@@ -117,3 +93,104 @@ const createUsername = usr => {
   });
 };
 createUsername(accounts);
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// LECTURES
+
+/////////////////////////////////////////////////
+
+// slice
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.slice(2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(1, -2));
+// console.log(arr.slice());
+
+// Splice
+// let arr2 = ['a', 'b', 'c', 'd', 'e'];
+// arr2.splice(1, 3);
+// console.log(arr2);
+
+//reverse
+// let arr3 = ['a', 'b', 'c', 'd', 'e'];
+// arr3.reverse();
+// console.log(arr3);
+
+// const arr4 = [23, 11, 65];
+// console.log(arr4[0]);
+// console.log(arr4.at(0));
+
+// console.log(arr4[arr4.length - 1]);
+// console.log(arr4.slice(-1)[0]);
+// console.log(arr4.at(-1));
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+//   if (movement > 0) {
+//     console.log(`You deposited ${movement}`);
+//   } else {
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// }
+// console.log('----FOREACH----');
+// movements.forEach(movement => {
+//   if (movement > 0) {
+//     console.log(`You deposited ${movement}`);
+//   } else {
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// });
+
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['INR', 'Indian Rupees'],
+// ]);
+
+// currencies.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+// console.log(currenciesUnique);
+// currenciesUnique.forEach(value, key, map => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// const check = function (dogs, cats) {
+//   const dogsCorected = dogs.slice();
+//   dogsCorected.splice(0, 1);
+//   dogsCorected.splice(-2);
+
+//   const dog = dogsCorected.concat(cats);
+//   dog.forEach((dog, i) => {
+//     if (dog >= 3) {
+//       console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
+//     } else {
+//       console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+//     }
+//   });
+// };
+
+// check([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const euroToUsd = 1.1;
+// const movementsUSD = movements.map(mov => {
+//   return mov * euroToUsd;
+// });
+// console.log(movements);
+// movementsUSD.fixed(2);
+// console.log(movementsUSD);
+
+// movements.map(
+//   (mov, i, arr) =>
+//     `Movement ${i + 1}:  You  ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+//       mov
+//     )}`
+// );
+// console.log(movements);

@@ -1,14 +1,28 @@
+/*************  ✨ Codeium Command 🌟  *************/
+@media (max-width: 600px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(4, 15rem) auto;
+  }
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
+  .balance {
+    grid-column: 1;
+    flex-direction: column;
+    align-items: center;
+  }
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
+  .balance__value {
+    font-size: 3.5rem;
+  }
 body {
   font-family: 'Poppins', sans-serif;
   color: #444;
@@ -17,6 +31,9 @@ body {
   padding: 2rem;
 }
 
+  .movements {
+    grid-row: 2 / span 2;
+  }
 nav {
   display: flex;
   justify-content: space-between;
@@ -24,19 +41,33 @@ nav {
   padding: 0 2rem;
 }
 
+  .summary {
+    grid-row: 4 / 5;
+  }
 .welcome {
   font-size: 1.9rem;
   font-weight: 500;
 }
 
+  .operation {
+    grid-row: 5 / 6;
+  }
 .logo {
   height: 5.25rem;
 }
 
+  .form {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.4rem 1rem;
+  }
 .login {
   display: flex;
 }
 
+  .form__input {
+    font-size: 1.2rem;
+  }
 .login__input {
   border: none;
   padding: 0.5rem 2rem;
@@ -51,11 +82,18 @@ nav {
   transition: all 0.3s;
 }
 
+  .form__btn {
+    font-size: 1.5rem;
+  }
 .login__input:focus {
   outline: none;
   border: 1px solid #ccc;
 }
 
+  .logout-timer {
+    text-align: center;
+    font-size: 1.1rem;
+  }
 .login__input::placeholder {
   color: #bbb;
 }
@@ -290,103 +328,4 @@ h2 {
   font-weight: 600;
 }
 
-/* ...............RESPONSIVE DESIGN.................... */
-
-/* Responsive Design Enhancements */
-@media (max-width: 1024px) {
-  /* Adjust nav for tablets */
-  nav {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .logo {
-    height: 5rem;
-  }
-  .login {
-    margin-top: 1.5rem;
-  }
-  
-  /* Improve balance section */
-  .balance {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  .balance__label {
-    font-size: 2.8rem;
-  }
-  .balance__value {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Stack main sections */
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .movements {
-    width: 90%;
-    max-height: 50vh;
-    overflow: scroll;
-  }
-
-  .movements__row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .movements__value {
-    margin-left: 0;
-    margin-top: 0.75rem;
-  }
-
-  /* Adjust operations */
-  .operation {
-    width: 90%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-
-  .form__btn {
-    margin-top: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Fine-tune smaller screens */
-  body {
-    padding: 1rem;
-  }
-
-  .balance__value {
-    font-size: 3.5rem;
-  }
-
-  .summary {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .summary__value {
-    margin-right: 0;
-    margin-top: 0.75rem;
-  }
-
-  .logout-timer {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-
+/******  af36fa30-cb6b-4c3b-8a39-8c84923bf778  *******/

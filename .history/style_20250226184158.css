@@ -289,104 +289,91 @@ h2 {
 .timer {
   font-weight: 600;
 }
+/* Existing CSS styles remain unchanged */
 
-/* ...............RESPONSIVE DESIGN.................... */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .app {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    grid-template-rows: auto repeat(3, 15rem) auto;
+  }
 
-/* Responsive Design Enhancements */
-@media (max-width: 1024px) {
-  /* Adjust nav for tablets */
-  nav {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .logo {
-    height: 5rem;
-  }
-  .login {
-    margin-top: 1.5rem;
-  }
-  
-  /* Improve balance section */
   .balance {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
+    flex-direction: column; /* Stack balance items vertically */
+    align-items: flex-start; /* Align items to the start */
   }
-  .balance__label {
-    font-size: 2.8rem;
+
+  .movements {
+    height: 40vh; /* Limit height for better visibility */
   }
-  .balance__value {
-    font-size: 5rem;
+
+  .summary {
+    flex-direction: column; /* Stack summary items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .summary__value {
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .operation {
+    padding: 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .form {
+    grid-template-columns: 1fr; /* Stack form inputs */
+    grid-template-rows: auto auto auto; /* Adjust rows */
+  }
+
+  .form__input {
+    font-size: 1.4rem; /* Adjust font size for inputs */
+  }
+
+  .form__btn {
+    font-size: 1.6rem; /* Adjust button font size */
+  }
+
+  .logout-timer {
+    font-size: 1rem; /* Adjust timer font size */
   }
 }
 
 @media (max-width: 768px) {
-  /* Stack main sections */
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
+  body {
+    padding: 1rem; /* Reduce padding for smaller devices */
   }
 
-  .movements {
-    width: 90%;
-    max-height: 50vh;
-    overflow: scroll;
+  .welcome {
+    font-size: 1.6rem; /* Adjust welcome font size */
+  }
+
+  .login__input {
+    width: 10rem; /* Reduce input width */
+    font-size: 1.4rem; /* Adjust font size */
+  }
+
+  .login__btn {
+    font-size: 1.8rem; /* Adjust button font size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust heading size */
   }
 
   .movements__row {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 1.5rem 2rem; /* Reduce padding in movements */
   }
 
-  .movements__value {
-    margin-left: 0;
-    margin-top: 0.75rem;
+  .movements__type,
+  .movements__date {
+    font-size: 1rem; /* Adjust font size for movements */
   }
 
-  /* Adjust operations */
-  .operation {
-    width: 90%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-
-  .form__btn {
-    margin-top: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Fine-tune smaller screens */
-  body {
-    padding: 1rem;
-  }
-
-  .balance__value {
-    font-size: 3.5rem;
-  }
-
-  .summary {
-    flex-direction: column;
-    align-items: center;
+  .summary__label {
+    font-size: 1rem; /* Adjust summary label size */
   }
 
   .summary__value {
-    margin-right: 0;
-    margin-top: 0.75rem;
-  }
-
-  .logout-timer {
-    text-align: center;
-    margin-top: 1rem;
+    font-size: 1.5rem; /* Adjust summary value size */
   }
 }
-

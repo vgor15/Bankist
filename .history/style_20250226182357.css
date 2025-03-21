@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #444;
   background-color: #f3f3f3;
   height: 100vh;
@@ -87,8 +88,8 @@ nav {
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
 
-  /* NOTE This creates the fade in/out animation */
-  /* opacity: 0; */
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 0;
   transition: all 1s;
 }
 
@@ -289,104 +290,3 @@ h2 {
 .timer {
   font-weight: 600;
 }
-
-/* ...............RESPONSIVE DESIGN.................... */
-
-/* Responsive Design Enhancements */
-@media (max-width: 1024px) {
-  /* Adjust nav for tablets */
-  nav {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .logo {
-    height: 5rem;
-  }
-  .login {
-    margin-top: 1.5rem;
-  }
-  
-  /* Improve balance section */
-  .balance {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  .balance__label {
-    font-size: 2.8rem;
-  }
-  .balance__value {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Stack main sections */
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .movements {
-    width: 90%;
-    max-height: 50vh;
-    overflow: scroll;
-  }
-
-  .movements__row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .movements__value {
-    margin-left: 0;
-    margin-top: 0.75rem;
-  }
-
-  /* Adjust operations */
-  .operation {
-    width: 90%;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-
-  .form__btn {
-    margin-top: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Fine-tune smaller screens */
-  body {
-    padding: 1rem;
-  }
-
-  .balance__value {
-    font-size: 3.5rem;
-  }
-
-  .summary {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .summary__value {
-    margin-right: 0;
-    margin-top: 0.75rem;
-  }
-
-  .logout-timer {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-

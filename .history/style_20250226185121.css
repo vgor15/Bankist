@@ -293,18 +293,19 @@ h2 {
 /* ...............RESPONSIVE DESIGN.................... */
 
 /* Responsive Design Enhancements */
+
 @media (max-width: 1024px) {
   /* Adjust nav for tablets */
   nav {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
   .logo {
-    height: 5rem;
+    height: 4rem;
   }
   .login {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
   
   /* Improve balance section */
@@ -312,13 +313,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
-  }
-  .balance__label {
-    font-size: 2.8rem;
-  }
-  .balance__value {
-    font-size: 5rem;
   }
 }
 
@@ -328,13 +322,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
   }
 
   .movements {
     width: 90%;
-    max-height: 50vh;
-    overflow: scroll;
+    max-height: 40vh;
   }
 
   .movements__row {
@@ -344,7 +336,7 @@ h2 {
 
   .movements__value {
     margin-left: 0;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   /* Adjust operations */
@@ -356,11 +348,10 @@ h2 {
 
   .form {
     grid-template-columns: 1fr;
-    padding: 0 1rem;
   }
 
   .form__btn {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -371,7 +362,7 @@ h2 {
   }
 
   .balance__value {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .summary {
@@ -381,12 +372,9 @@ h2 {
 
   .summary__value {
     margin-right: 0;
-    margin-top: 0.75rem;
   }
 
   .logout-timer {
     text-align: center;
-    margin-top: 1rem;
   }
 }
-

@@ -85,25 +85,7 @@ const calcPrintBalance = movements => {
   labelBalance.textContent = `${balance} INR`;
 };
 
-calcPrintBalance(account1.movements);
-
-const calcDisplaySummary = movements => {
-  const incomes = movements.filter(mov => mov > 0);
-  const deposits = incomes.reduce((acc, curr) => acc + curr, 0);
-  labelSumIn.textContent = `${deposits} INR`;
-
-  const withdrawals = movements.filter(mov => mov < 0);
-  const withdraw = withdrawals.reduce((acc, curr) => acc + curr, 0);
-  labelSumOut.textContent = `${Math.abs(withdraw)} INR `;
-
-  const interest = movements
-    .filter(mov => mov > 0)
-    .map(mov => (mov * 1.2) / 100)
-    .reduce((acc, curr) => acc + curr, 0);
-  labelSumInterest.textContent = `${interest} INR`;
-};
-
-calcDisplaySummary(account1.movements);
+calcPrintBalance
 
 // to convert the username to first letter
 // const usr = 'Vyom Gor'; // vg

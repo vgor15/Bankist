@@ -98,7 +98,7 @@ const calcDisplaySummary = movements => {
 
   const interest = movements
     .filter(mov => mov > 0)
-    .map(mov => (mov * 1.2) / 100)
+    .map(mov => mov * 1.2 / 100)
     .reduce((acc, curr) => acc + curr, 0);
   labelSumInterest.textContent = `${interest} INR`;
 };

@@ -1,0 +1,3 @@
+const checkDog = (dogsJuliya, dogsKate) => {
+  
+}
