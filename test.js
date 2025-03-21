@@ -135,9 +135,10 @@
 // );
 
 // console.log(move);
-
-const calAverageHumanAge = ages => {
-  return ages.map(age => (age <= 2 ? 2 * age : 16 + age));
-};
+const calAverageHumanAge = ages =>
+  ages
+    .map(age => (age <= 2 ? 2 * age : 16 + age))
+    .filter(age => age >= 18)
+    .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
 
 console.log(calAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));

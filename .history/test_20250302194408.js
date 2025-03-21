@@ -1,3 +1,0 @@
-const checkDog = (dogsJuliya, dogsKate) => {
-  
-}

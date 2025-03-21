@@ -1,1 +1,0 @@
-const checkDog = (dogsJuliya,dogsKate)=>{}
